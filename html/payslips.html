@@ -1,0 +1,292 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/semantic.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/semantic.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <style>
+        .attached.stackable.menu{
+            margin-bottom: 20px;
+        }
+        /**.vertical.pointing.menu{
+            background-color: #00B5AD !important;
+            color: white !important
+        }**/
+        .ui.grid .ui.header{
+            color:#00B5AD !important
+            
+        }
+        .vertical.pointing.menu .item.active{
+            background-color: #00B5AD;
+            color: white
+        }
+        .ui.table thead tr{
+            background-color: #00B5AD !important;
+            color: whitesmoke !important
+        }
+        form .field label{
+            color:#00B5AD;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="ui container">
+
+        <div class="ui attached stackable menu">
+            <div class="ui container">
+                <div class="center menu">
+                    <a class="item">
+                        <div class="ui large header">
+                            <i class="money teal  bill icon"></i>
+                            <div class="content">
+                                Gwapp !!
+                                <div class="sub header">for collecting money</div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="right menu">
+                    <div class="item">
+                        <i class='teal logout icon'></i>Logout
+                    </div>
+                    <a class="item" id="viewProfile">
+                        <i class="teal user icon"></i>Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment">
+            <h2 class="ui header">Payslips</h2>
+            <div class="ui sub header">Select month to add payslip</div>
+            <div class="ui grid">
+                <div class="padded column">
+                    <div class="ui action input padded">
+                        <div class="ui calendar six wide field" id="payslipMonth">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="Date/Time">
+                            </div>
+                        </div>
+                        <button class="ui teal button">Add Month</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ui grid">
+                <div class="four wide column">
+                    <div class="ui vertical fluid pointing menu">
+                        <a class="active item" data-tab="dashboard">
+                            <i class=" large dashboard icon"></i> Dashboard
+                        </a>
+                        <a class="item" data-tab="requisition">
+                            <i class="large file alternative icon"></i> Requisitions
+                        </a>
+                        <a class="item" data-tab="history">
+                            <i class="large tasks icon"></i> Retirements
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stretched twelve wide column">
+                    <!--Dash Board Tab-->
+                    <div class="ui active tab" data-tab="dashboard">
+                        <div class="ui segment">
+                            <div class="padded column">
+                                <button class="right floated ui padded teal button"><i class="plus icon"></i> Add
+                                    Payslip</button>
+                                <h3 class="ui header">Payslips for the month of February</h3>
+
+                            </div>
+                            <div class="ui padded segment">
+                                <div class="ui three stackable cards">
+                                    <div class="card">
+                                        <div class="content">
+                                            <div class="header">Empty List</div>
+                                            <div class="description">
+                                                There are no payslips yet for this month
+                                            </div>
+                                        </div>
+                                        <div class="ui bottom attached teal button">
+                                            <i class="add icon"></i>
+                                            Add Payslip
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="content">
+                                            <img class="right floated mini ui image" src="../images/pp.jpg">
+                                            <div class="header">
+                                                Adekunle Adelowo
+                                            </div>
+                                            <div class="meta">
+                                                Software Engineer
+                                            </div>
+                                            <div class="description">
+                                                Modified last at 3:45 Jan 2019
+                                            </div>
+                                        </div>
+                                        <div class="extra content">
+                                            <div class="ui two buttons">
+                                                <div class="ui basic green button">Approve</div>
+                                                <div class="ui basic red button">Decline</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="content">
+                                            <img class="right floated mini ui image" src="../images/pp.jpg">
+                                            <div class="header">
+                                                Adekunle Adelowo
+                                            </div>
+                                            <div class="meta">
+                                                Software Engineer
+                                            </div>
+                                            <div class="description">
+                                                Modified last at 3:45 Jan 2019
+                                            </div>
+                                        </div>
+                                        <div class="extra content">
+                                            <div class="ui two buttons">
+                                                <div class="ui basic primary button">Edit</div>
+                                                <div class="ui basic red button">Decline</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-----------------------------------------------------------------------------Modal Sections------------------------------------------------->
+                <!--PaySlip Modal-->
+                <div class="ui modal" id="slips">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        Payslips
+                    </div>
+                    <div class="content">
+                            <div class="ui segment">
+                                    <form class="ui form">
+                                        <div class="field">
+                                            <label>Name</label>
+                                            <select class="ui dropdown">
+                                                <option value="Adekunle">Adekunle</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>Name</label>
+                                            <input type="text" name="designation" placeholder="Payee Designation" />
+                                        </div>
+                                        <div class="ui two column grid">
+                                            <div class="column">
+                                                <h5 class="ui header">Earnings</h5>
+                                                <div class="eight wide field">
+                                                    <label>Housing Allowance</label>
+                                                    <input type="number" name="housingAllowance" placeholder=" Housing Allowance" />
+                                                </div>
+                                                <div class="eight wide field">
+                                                    <label>Transportation Allowance</label>
+                                                    <input type="number" name="transportAllowance" placeholder=" Transportation Allowance" />
+                                                </div>
+                                                <div class="eight wide field">
+                                                    <label>Uitility Allowance</label>
+                                                    <input type="number" name="utilityAllowance" placeholder=" Uitility Allowance" />
+                                                </div>
+                                                <div class="eight wide field">
+                                                    <label>Entertainment</label>
+                                                    <input type="number" name="Entertainment" placeholder=" Housing Allowance" />
+                                                </div>
+                                            </div>
+                                            <div class="column">
+                                                    <h5 class="ui header">Deductions</h5>
+                                                    <div class="eight wide field">
+                                                            <label>Pension</label>
+                                                            <input type = "number" name = "pension" placeholder=" Pension"/>
+                                                    </div>
+                                                    <div class="eight wide field">
+                                                            <label>Tax</label>
+                                                            <input type = "number" name = "Tax" placeholder="PAYE"/>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="fields">
+                                            <div class="eight wide field">
+                                                <label>Gross Salary</label>
+                                                <input type="text" name="grossSalary" placeholder="Gross Salary" />
+                                            </div>
+                                            <div class="eight wide field">
+                                                <label>Net Salary</label>
+                                                <input type="text" name="netSalary" placeholder="Net Salary" />
+                                            </div>
+                                        </div>
+                                        <button type="button" class="ui teal button">Submit</button>
+                                    </form>
+                                </div>
+                    </div>
+                    
+                </div>
+                <!--Confirm Modal-->
+                <div class="small ui modal" id="confirmModal">
+                    <div class="header">Confirm</div>
+                    <div class="content">
+                        <p id="confirmMessage">Send Admin A reminder</p>
+                    </div>
+                    <div class="actions">
+                        <div class="ui approve basic green button">Approve</div>
+                        <div class="ui cancel basic red button">Cancel</div>
+                    </div>
+                </div>
+                <!--Message Notificaion Modal-->
+                <div class="mini ui modal" id="messageModal">
+                    <div class="header">Notifications</div>
+                    <div class="content">
+                        <p>Very long content goes here</p>
+                    </div>
+                    <div class="actions">
+                        <span class="ui left floated button">18 Nov 2018</span>
+                        <div class="ui approve primary button">Ok</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+</body>
+<script type="text/javascript">
+    $('.ui.modal')
+        .modal()
+    const today = new Date();
+    $('#payslipMonth').calendar({ type: 'month' }).calendar('set date', today);
+    $('#example2').calendar({ type: 'date' }).calendar('set date', today);
+
+    $('#pettyCash')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '.reqmodal', 'show')
+    $('#funds')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '.fundsmodal', 'show')
+    $('#profile')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '#viewProfile', 'show')
+
+    $('.vertical.menu .item').tab();
+</script>
+
+</html>

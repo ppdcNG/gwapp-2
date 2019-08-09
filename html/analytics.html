@@ -1,0 +1,741 @@
+<html>
+
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/semantic.css" />
+  <script src="../js/jquery.js"></script>
+  <script src="../js/semantic.js"></script>
+  <script
+    src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+  <style>
+    .attached.stackable.menu {
+      margin-bottom: 20px;
+    }
+
+    /**.vertical.pointing.menu{
+            background-color: #00B5AD !important;
+            color: white !important
+        }**/
+    .ui.grid .ui.header {
+      color: #00B5AD !important
+    }
+
+    .vertical.pointing.menu .item.active {
+      background-color: #00B5AD;
+      color: white
+    }
+
+    .ui.table thead tr {
+      background-color: #00B5AD !important;
+      color: whitesmoke !important
+    }
+
+    form .field label {
+      color: #00B5AD;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ui container">
+    <div class="ui attached stackable menu">
+      <div class="ui container">
+        <div class="center menu">
+          <a class="item">
+            <div class="ui large header">
+              <i class="chart line open teal  icon"></i>
+              <div class="content">
+                Gwapplytics !!
+                <div class="sub header">for collecting money</div>
+              </div>
+
+            </div>
+          </a>
+        </div>
+        <div class="right menu">
+          <a class="ui basic pointing teal dropdown item">
+            Reports
+            <i class="chevron down icon"></i>
+            <div class="menu">
+              <div class="item">
+                <i class="chevron down icon"></i>
+                <span class="text">Project Reports</span>
+                <div class="menu">
+                  <div class="header">
+                    <i class="download icon"></i>
+                    Download Reports
+                  </div>
+                  <div class="item">DISI</div>
+                  <div class="item">Homevida</div>
+                  <div class="item">Directors Funds</div>
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="item">
+                <i class="chevron down icon"></i>
+                <span class="text">Financial Reports</span>
+                <div class="left menu">
+                  <div class="header">
+                    <i class="download icon"></i>
+                    Download reports
+                  </div>
+                  <div class="item">Full Report</div>
+                  <div class="item">This Month</div>
+                  <div class="item">This Week</div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="item" id="logout">
+            <i class='teal logout icon'></i>Logout
+          </a>
+
+        </div>
+      </div>
+    </div>
+    
+    <div id = "viewReq" class="ui medium modal">
+      <div class="header">Requisition</div>
+      <div class="content">
+          <table class="ui very padded basic small definition table">
+      
+              <tbody>
+                <tr>
+                  <td class = "positive">Name</td>
+                  <td>Adelowo Adekunle</td>
+                </tr>
+                <tr>
+                  <td>Jamie</td>
+                  <td>Approved</td>
+                  
+                </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Denied</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="ui medium header">Item(s)</div>
+            <table class="ui very padded basic collapsing small table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Amount</th>
+                  <th>Files</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class = "positive">Name</td>
+                  <td>Adelowo Adekunle</td>
+                  <td class="collapsing">
+                      <a class="ui teal tag label">Featured</a>
+                      <a class="ui teal tag label">Featured</a>
+                      <a class="ui teal tag label">Featured</a>
+                      <a class="ui teal tag label">Featured</a>
+                      <a class="ui teal tag label">Featured</a>
+                  </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                  <tdco>Jill</td>
+                  <td>Denied</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                    <th colspan="2">
+                      Total
+                    </th>
+                    <th>
+                      500,00
+                    </th>
+                  </tr>
+                </tfoot>
+            </table>
+            <div class="ui two column grid">
+              <div class="column">
+                  <h1 class="ui image header">
+                      
+                      <div class="padded content">
+                        Lena
+                        <div class="sub header">Checked By</div>
+                        <div class="sub header">
+                            15 Feb 2019
+                          </div>
+                    </div>
+                    
+                    <img src="../images/pp.jpg" class="ui paddedsmall rounded image">
+                  </h1>
+        
+              </div>
+              <div class="column">
+                  <h1 class="ui image header">
+                                  
+                      <div class="padded content">
+                        Lena
+                        <div class="sub header">Approved By</div>
+                    </div>
+                    <img src="../images/pp.jpg" class="ui paddedsmall rounded image">
+                  </h1>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="ui large header">Analytics</div>
+    <form class="ui form">
+      <div class="ui two fields">
+          <div class="ui selection dropdown eight wide field">
+              <input type="hidden" name="gender">
+              <i class="teal calendar icon"></i>
+              <div class="default text">Filter Time</div>
+              <div class="menu">
+                <div class="item" data-value="today">Today</div>
+                <div class="item" data-value="week">This Week</div>
+                <div class="item" data-value="month">This Month</div>
+                <div class="item" data-value="total">All</div>
+              </div>
+            </div>
+      
+            <div class="ui styled accordion eight wide field">
+              <div class="title">
+                <i class="icon  teal dropdown"></i>
+                Custom Range
+              </div>
+              <div class="content">
+                <div class="two fields">
+                  <div class="ui calendar eight wide field" id="startDate">
+                    <label>Start Date</label>
+                    <div class="ui input left icon">
+                      <i class="calendar icon"></i>
+                      <input type="text" placeholder="Date/Time">
+                    </div>
+                  </div>
+                  <div class="ui calendar eight wide field" id="endDate">
+                    <label>End Date</label>
+                    <div class="ui input left icon">
+                      <i class="calendar icon"></i>
+                      <input type="text" placeholder="Date/Time">
+                    </div>
+                  </div>
+                </div>
+                <button class="ui teal button" type="button">Apply</button>
+              </div>
+            </div>
+      </div>
+      
+
+    </form>
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid teal card">
+          <div class="content">
+              <div class="ui floating right floated icon dropdown">
+                  <i class="circular chevron down teal icon"></i>
+                  <div class="menu">
+                    <div class="header">
+                      Chart Type
+                    </div>
+                    <div class="divider"></div>
+                    <div class="item">
+                      <span class="text">Pie Chart</span>
+                    </div>
+                    <div class="item">
+                      <span class="text">Bar Chart</span>
+                    </div>
+                    <div class="item">
+                      <span class="text">Column Chart</span>
+                    </div>
+                  </div>
+              </div>
+            <div class="header">Categories</div>
+          </div>
+          <div class="image">
+            <img src="../images/pp.jpg">
+          </div>
+          <div class="content">
+            <div class="ui items">
+              <div class="item">
+                <i class="big green money bill icon"></i>
+                <div class="content">
+                  <div class="small header">Petty Cash</div>
+                  <div class="meta">
+                    <span class="price">$1200</span>
+                    <span class="stay">22 in Number</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <i class="big building half orange icon"></i>
+                <div class="content">
+                  <div class="small header">Fund Requisition</div>
+                  <div class="meta">
+                    <span class="price">$1200</span>
+                    <span class="stay">1 Number</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                  <i class="big calendar check outline orange icon"></i>
+                  <div class="content">
+                    <div class="small header">Payslips</div>
+                    <div class="meta">
+                      <span class="price">$1200</span>
+                      <span class="stay">1 Number</span>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="extra content">
+              <div class="right floated meta">Export Data <i class="circular external alternate teal icon"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+          <div class="ui fluid  teal card">
+              <div class="content">
+                  <div class="ui floating right floated icon dropdown">
+                      <i class="circular chevron down teal icon"></i>
+                      <div class="menu">
+                        <div class="header">
+                          Chart Type
+                        </div>
+                        <div class="divider"></div>
+                        <div class="item">
+                          <span class="text">Pie Chart</span>
+                        </div>
+                        <div class="item">
+                          <span class="text">Bar Chart</span>
+                        </div>
+                        <div class="item">
+                          <span class="text">Column Chart</span>
+                        </div>
+                      </div>
+                  </div>
+                <div class="header">Projects</div>
+              </div>
+              <div class="ui large image">
+                <img src="../images/pp.jpg">
+              </div>
+              <div class="content">
+                <div class="ui items">
+                  <div class="item">
+                    <i class="big green tag icon"></i>
+                    <div class="content">
+                      <div class="small header">Petty Cash</div>
+                      <div class="meta">
+                        <span class="price">$1200</span>
+                        <span class="stay">22 in Number</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <i class="big tag blue icon"></i>
+                    <div class="content">
+                      <div class="small header">Fund Requisition</div>
+                      <div class="meta">
+                        <span class="price">$1200</span>
+                        <span class="stay">1 Number</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                      <i class="big tag icon"></i>
+                      <div class="content">
+                        <div class="small header">Payslips</div>
+                        <div class="meta">
+                          <span class="price">$1200</span>
+                          <span class="stay">1 Number</span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <i class="big tag teal icon"></i>
+                      <div class="content">
+                        <div class="small header">Payslips</div>
+                        <div class="meta">
+                          <span class="price">$1200</span>
+                          <span class="stay">1 Number</span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <i class="big tag violet icon"></i>
+                      <div class="content">
+                        <div class="small header">Payslips</div>
+                        <div class="meta">
+                          <span class="price">$1200</span>
+                          <span class="stay">1 Number</span>
+                        </div>
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="extra content">
+                  <div class="right floated meta">Export Data <i class="circular external alternate teal icon"></i></div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="ui three column grid">
+      <div class="column">
+        <div class="ui teal segment">
+          <div class="ui header">Users</div>
+          <table class="ui very basic fluid celled table">
+              <tbody>
+                  <tr>
+                      <td>
+                        <h4 class="ui image header">
+                          <img src="../images/pp.jpg" class="ui mini rounded image">
+                          <div class="content">
+                            Lena
+                            <div class="sub header">Human Resources
+                          </div>
+                          
+                        </div>
+                      </h4></td>
+                      <td>
+                        22
+                      </td>
+                    </tr>
+                <tr>
+                  <td>
+                    <h4 class="ui image header">
+                      <img src="../images/pp.jpg" class="ui mini rounded image">
+                      <div class="content">
+                        Lena
+                        <div class="sub header">Human Resources
+                      </div>
+                    </div>
+                  </h4></td>
+                  <td>
+                    22
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4 class="ui image header">
+                      <img src="../images/pp.jpg" class="ui mini rounded image">
+                      <div class="content">
+                        Matthew
+                        <div class="sub header">Fabric Design
+                      </div>
+                    </div>
+                  </h4></td>
+                  <td>
+                    15
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4 class="ui image header">
+                      <img src="../images/pp.jpg" class="ui mini rounded image">
+                      <div class="content">
+                        Lindsay
+                        <div class="sub header">Entertainment
+                      </div>
+                    </div>
+                  </h4></td>
+                  <td>
+                    12
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4 class="ui image header">
+                      <img src="../images/pp.jpg" class="ui mini rounded image">
+                      <div class="content">
+                        Mark
+                        <div class="sub header">Executive
+                      </div>
+                    </div>
+                  </h4></td>
+                  <td>
+                    11
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                    <th colspan="5">
+                      <div class="ui right floated pagination menu">
+                        <a class="icon item">
+                          <i class="left chevron icon"></i>
+                        </a>
+                        <a class="icon item">
+                          <i class="right chevron icon"></i>
+                        </a>
+                      </div>
+                    </th>
+                  </tr>
+                </tfoot>
+            </table>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui teal segment">
+            <div class="ui floating right floated icon dropdown very basic button">
+                <i class="circular chevron down teal icon"></i>
+                <div class="menu">
+                  <div class="header">
+                    Chart Type
+                  </div>
+                  <div class="divider"></div>
+                  <div class="item">
+                    <span class="text">Pie Chart</span>
+                  </div>
+                  <div class="item">
+                    <span class="text">Bar Chart</span>
+                  </div>
+                  <div class="item">
+                    <span class="text">Column Chart</span>
+                  </div>
+                </div>
+            </div>
+          <div class="header">User Visuals</div>
+          <div class="ui larg image">
+            <img src="../images/pp.jpg"/>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+          <div class="ui teal segment">
+              <div class="ui floating right floated icon dropdown very basic button">
+                  <i class="circular chevron down teal icon"></i>
+                  <div class="menu">
+                    <div class="header">
+                      Chart Type
+                    </div>
+                    <div class="divider"></div>
+                    <div class="item">
+                      <span class="text">Pie Chart</span>
+                    </div>
+                    <div class="item">
+                      <span class="text">Bar Chart</span>
+                    </div>
+                    <div class="item">
+                      <span class="text">Column Chart</span>
+                    </div>
+                  </div>
+              </div>
+            <div class="header">User Visuals</div>
+          </div>
+      </div>
+    </div>
+    <div class="ui teal segment">
+      <div class="ui large header">Requisitions</div>
+      <div class="sub header">Search Requisitions</div>
+      <form class="ui form">
+        
+          <div class="ui accordion">
+              <div class="title">
+                <i class="icon  teal dropdown"></i>
+                Search Requisition
+              </div>
+              <div class="content">
+                <div class="three fields">
+                  <div class="ui six wide field">
+                    <label><i class="user icon"></i> User</label>
+                        <select class="ui dropdown">
+                            <option value = "">Kunle</option>
+                            <option value = "">Kunle</option>
+                            <option value = "">Kunle</option>
+                          </select>
+                  </div>
+                  <div class="ui six wide field">
+                      <label><i class="book icon"></i> Project</label>
+                          <select class="ui dropdown">
+                              <option value = "DISI">DISI</option>
+                              <option value = "HomeVida">HomeVida</option>
+                              <option value = "dkadslkf;dk">HomeVida</option>
+                            </select>
+                  </div>
+                  <div class="ui six wide field">
+                      <label><i class="file icon"></i> Type</label>
+                          <select class="ui dropdown">
+                              <option value = "dfasd">Petty Cash</option>
+                              <option value = "dfdaf">Fund Requisition</option>
+                              <option value = "fsete">Payslips</option>
+                            </select>
+                  </div>
+                </div>
+                
+                <button class="ui teal button" type="button"><i class="icon search"></i></button>
+              </div>
+            </div>
+      </form>
+      <div class="ui medium header">Requisitions</div>
+      <table class="ui celled padded fluid table">
+        <thead>
+          <tr>
+            <th class="">Date</th>
+            <th>Title</th>
+            <th>User</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ui center aligned collapsing">
+              29 Feb 2019
+            </td>
+            <td class="ui center aligned collapsing">
+              Requisition for two power DC plugs
+            </td>
+            <td class="ui center aligned collapsing">
+              Adekunle Adelowo
+            </td>
+            <td class="ui center aliged collapsing">
+              N100,000.00
+            </td>
+            <td class="collapsing">
+                <div class="ui buttons">
+                    <button class="ui primary basic button reqmodal"><i class="eye icon"></i>View</button>
+                    <button class="ui positive basic button"><i class="print icon"></i>Print</button>
+                    <button class="ui teal basic button"><i class="download icon"></i>Download</button>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2 class="ui center aligned header">A</h2>
+            </td>
+            <td class="single line">
+              Weight
+            </td>
+            <td>
+              <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+            </td>
+            <td class="right aligned">
+              100% <br>
+              <a href="#">65 studies</a>
+            </td>
+            <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess
+              potency</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="5">
+              <div class="ui right floated pagination menu">
+                <a class="icon item">
+                  <i class="left chevron icon"></i>
+                </a>
+                <a class="icon item">
+                  <i class="right chevron icon"></i>
+                </a>
+              </div>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="ui two column grid">
+      <div class="column">
+          <div class="ui fluid teal card">
+              <div class="content">
+                <div class="ui floating right floated icon dropdown">
+                    <i class="circular chevron down teal icon"></i>
+                    <div class="menu">
+                      <div class="header">
+                        Chart Type
+                      </div>
+                      <div class="divider"></div>
+                      <div class="item">
+                        <span class="description">2 new</span>
+                        <span class="text">Important</span>
+                      </div>
+                      <div class="item">
+                        <span class="description">10 new</span>
+                        <span class="text">Hopper</span>
+                      </div>
+                      <div class="item">
+                        <span class="description">5 new</span>
+                        <span class="text">Discussion</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="header">Time Series</div>
+              </div>
+              <div class="image">
+                <img src="../images/pp.jpg">
+              </div>
+              <div class="content">
+
+              </div>
+              <div class="extra content">
+                  <div class="right floated meta">Export Data <i class="circular external alternate teal icon"></i></div>
+              </div>
+          </div>
+      </div>
+      <div class="column">
+          <div class="ui fluid teal card">
+              <div class="content">
+                <div class="ui floating right floated icon dropdown">
+                    <i class="circular chevron down teal icon"></i>
+                    <div class="menu">
+                      <div class="header">
+                        Chart Type
+                      </div>
+                      <div class="divider"></div>
+                      <div class="item">
+                        <span class="description">2 new</span>
+                        <span class="text">Important</span>
+                      </div>
+                      <div class="item">
+                        <span class="description">10 new</span>
+                        <span class="text">Hopper</span>
+                      </div>
+                      <div class="item">
+                        <span class="description">5 new</span>
+                        <span class="text">Discussion</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="header">Time Series</div>
+              </div>
+              <div class="image">
+                <img src="../images/pp.jpg">
+              </div>
+              <div class="content">
+
+              </div>
+              <div class="extra content">
+                  <div class="right floated meta">Export Data <i class="circular external alternate teal icon"></i></div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<script type="text/javascript">
+  $('.ui.modal')
+    .modal();
+  $('.ui.dropdown')
+    .dropdown();
+  $('.ui.accordion')
+    .accordion();
+  const today = new Date();
+  $('#startDate').calendar({ type: 'date' }).calendar('set date', today);
+  $('#endDate').calendar({ type: 'date' }).calendar('set date', today);
+  $('.ui.selection.dropdown')
+    .dropdown({
+      clearable: true
+    })
+    ;
+
+</script>
+
+</html>

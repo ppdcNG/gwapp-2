@@ -1,0 +1,619 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/semantic.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/semantic.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <style>
+        .attached.stackable.menu {
+            margin-bottom: 20px;
+        }
+
+        .ui.grid .ui.header {
+            color: #00B5AD !important
+        }
+
+        .vertical.pointing.menu .item.active {
+            background-color: #00B5AD;
+            color: white
+        }
+
+        .ui.table thead tr {
+            background-color: #00B5AD !important;
+            color: whitesmoke !important
+        }
+
+        form .field label {
+            color: #00B5AD;
+        }
+
+        /* *** */
+        a.active.item,
+        a.active.item::after {
+            background-color: #00b5ad !important;
+        }
+
+        .ui.container {
+            padding: 0 !important;
+        }
+
+        #flip {
+            cursor: pointer;
+            display: none;
+        }
+
+        #panel {
+            display: none;
+        }
+
+        a.btn {
+            width: 10vw;
+            background: #00B5AD;
+        }
+
+        /* mobile */
+        @media only screen and (max-width: 767px) {
+            .ui.pointing.menu {
+                display: block;
+            }
+
+            a.active.item::after {
+                display: none;
+            }
+
+            #flip {
+                display: block;
+            }
+
+            #nav {
+                display: none
+            }
+
+            .ui.two.column.very.relaxed.grid>.column {
+                width: 100%;
+            }
+
+            .ui.two.column.very.relaxed.grid>.column:nth-child(1) .item {
+                width: 50%;
+                float: left;
+            }
+
+            div.ui.vertical.divider::after,
+            div.ui.vertical.divider::before {
+                display: none;
+            }
+
+            .ui.buttons {
+                display: block;
+            }
+
+            .ui.celled.striped.table tr {
+                padding: 0 !important;
+            }
+
+            .ui.celled.striped.table tr {
+                padding: 10px 0 !important;
+            }
+
+            .ui.celled.striped.table td {
+                border: 0.1px solid rgba(0, 0, 0, 0.2) !important;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body style="width:100%">
+    <div class="ui container">
+        <div class="ui attached stackable menu">
+            <div class="ui container">
+                <div class="center menu">
+                    <a class="item">
+                        <div class="ui large header">
+                            <i class="money teal  bill icon"></i>
+                            <div class="content">
+                                Gwapp !!
+                                <div class="sub header" style="color:blanchedalmond">ADMIN</div>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="right menu">
+                    <div class="item">
+                        <i class='teal logout icon'></i>Logout
+                    </div>
+                    <a class="item" id="viewProfile">
+                        <i class="teal user icon"></i>Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- menu items -->
+        <div class="ui pointing menu" id="nav">
+            <a class="active item" data-tab="dashboard">
+                <i class="dashboard icon"></i>
+                Dashboard
+            </a>
+            <a class="item" data-tab="requisitions">
+                <i class="fas fa-list"></i>
+                &nbsp;Retirements
+            </a>
+            <a class="item" data-tab="accounts">
+                <i class="fas fa-folder-open"></i>
+                &nbsp;Accounts/Projects
+            </a>
+            <a class="item" data-tab="analytics">
+                <i class="fas fa-chart-line"></i>
+                &nbsp;Analytics
+            </a>
+            <a class="item" data-tab="generate">
+                <i class="fas fa-recycle"></i>
+                &nbsp;Generate
+            </a>
+        </div>
+        <!-- menu items end -->
+
+        <!-- menu items navigation for small screen -->
+        <a id="flip" class="btn btn-outline-light mb-2"><i class="fas fa-bars"></i></a>
+        <div id="panel" class="mb-2">
+            <div class="ui pointing menu topnav">
+                <a class="active item" data-tab="dashboard">
+                    <i class="dashboard icon"></i>
+                    Dashboard
+                </a>
+                <a class="item" data-tab="requisitions">
+                    <i class="fas fa-list"></i>
+                    &nbsp;Retirements
+                </a>
+                <a class="item" data-tab="accounts">
+                    <i class="fas fa-folder-open"></i>
+                    &nbsp;Accounts/Projects
+                </a>
+                <a class="item" data-tab="analytics">
+                    <i class="fas fa-chart-line"></i>
+                    &nbsp;Analytics
+                </a>
+                <a class="item" data-tab="generate">
+                    <i class="fas fa-recycle"></i>
+                    &nbsp;Generate
+                </a>
+            </div>
+        </div>
+        <!-- end navigation for small screen -->
+
+        <div class="ui active tab" data-tab="dashboard">
+
+            <div class="ui segment">
+                <div class="ui two column very relaxed grid">
+                    <div class="column">
+                        <div class="ui big header">Gwapp Admin</div>
+                        <div class="ui center aligned items">
+                            <div class="item center aligned">
+                                <i class="big green check icon"></i>
+                                <div class="content">
+                                    <div class="tiny header">Total Amount Disbursed</div>
+                                    <div class="meta">
+                                        <span class="price">$1200</span>
+                                        <span class="stay">22 in Number</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="big hourglass half orange icon"></i>
+                                <div class="content">
+                                    <div class="small header">Pending Retirement</div>
+                                    <div class="meta">
+                                        <span class="price">$1200</span>
+                                        <span class="stay">1 Number</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui medium header">Notifications</div>
+                        <div class="ui teal label">
+                            <i class="mail icon"></i> 23
+                        </div>
+                        <div class="ui center aligned relaxed divided list">
+                            <div class="item">
+                                <i class="large teal envelope middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header">Semantic-Org/Semantic-UI</a>
+                                    <div class="description">Updated 10 mins ago</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large envelope middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header">Semantic-Org/Semantic-UI</a>
+                                    <div class="description">Updated 10 mins ago</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large envelope middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header">Semantic-Org/Semantic-UI</a>
+                                    <div class="description">Updated 10 mins ago</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large envelope middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header">Semantic-Org/Semantic-UI</a>
+                                    <div class="description">Updated 10 mins ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui vertical divider">
+                </div>
+
+            </div>
+
+            <div class="ui segment mb-5">
+                <div class="ui large header">Admin Dashboard</div>
+                <div class="ui middle aligned one column centered grid">
+                    <div class="column">
+                        <div class="ui header">Requisition request</div>
+
+                        <table class="ui celled striped table">
+                            <thead>
+                                <tr>
+                                    <th>Individual</th>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img class="ui avatar image" src="../images/pp.jpg">
+                                        Adekunle Adelowo
+                                    </td>
+                                    <td class="">
+                                        11 Jan 2019
+                                    </td>
+                                    <td>Petty Cash</td>
+                                    <td>Request for transportation to Neiti</td>
+                                    <td>N10,000</td>
+                                    <td>Pending</td>
+                                    <td class="center aligned">
+                                        <div class="ui buttons">
+                                            <button class="ui secondary basic button reqmodal"><i
+                                                    class="pencil icon"></i>Check</button>
+                                            <button class="ui primary basic button"><i class="reply icon"></i>Send
+                                                Back</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="ui avatar image" src="../images/pp.jpg">
+                                        Adekunle Adelowo
+                                    </td>
+                                    <td class="">
+                                        11 Jan 2019
+                                    </td>
+                                    <td>Petty Cash</td>
+                                    <td>Request for transportation to Neiti</td>
+                                    <td>N10,000</td>
+                                    <td>Approved</td>
+                                    <td class="center aligned">
+                                        <i class="fas fa-check" style="color:green"></i> Approved&nbsp;
+                                        <div class="ui buttons">
+                                            <button class="ui primary basic button"><i class="fas fa-eye"></i>
+                                                View</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img class="ui avatar image" src="../images/pp.jpg">
+                                        Adekunle Adelowo
+                                    </td>
+                                    <td class="">
+                                        11 Jan 2019
+                                    </td>
+                                    <td>Petty Cash</td>
+                                    <td>Request for transportation to Neiti</td>
+                                    <td>N10,000</td>
+                                    <td>Checked by<br /><strong>PPDC Finance</strong></td>
+                                    <td class="center aligned">
+                                        <div class="ui buttons">
+                                            <button class="ui secondary basic button reqmodal"><i
+                                                    class="pencil icon"></i>Check</button>
+                                            <button class="ui primary basic button"><i class="reply icon"></i>Send
+                                                Back</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Launch demo modal
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <!-- <div class="ui segment">
+                <h2 class="ui header">
+                    <img src="../images/pp.jpg" class="ui circular image">
+                    Patrick
+                </h2>
+                <form class="ui form">
+                    <div class="four wide  field">
+                        <label>Title</label>
+                        <input type="text" readonly name="title" placeholder="Title">
+                    </div>
+                    <div class="four wide field">
+                        <label>Date</label>
+                        <input type="text" readonly name="time" placeholder="Date">
+                    </div>
+                    <div class="four wide field">
+                        <label>Type</label>
+                        <input type="text" readonly name="amountInWords" placeholder="Anount in words">
+                    </div>
+                    <div class="four wide field">
+                        <label>Total Amount</label>
+                        <input type="text" readonly name="total" placeholder="Total">
+                    </div>
+                    <div class="four wide field">
+                        <label>Amount in words</label>
+                        <input type="text" readonly name="amountInWords" placeholder="Anount in words">
+                    </div>
+                    <div class="eight wide field">
+                        <div id="item-table">
+                            <table class="ui small celled striped table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">
+                                            Items
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="collapsing">
+                                            <i class="folder icon"></i> node_modules
+                                        </td>
+                                        <td>Initial commit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> test
+                                        </td>
+                                        <td>Initial commit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> build
+                                        </td>
+                                        <td>Initial commit</td>
+
+                                    </tr>
+                                </tbody>
+                                <tfoot class="full-width">
+                                    <tr>
+                                        <th>Total</th>
+                                        <th colspan="4">
+                                            500,000
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="four wide field">
+                        <label>Signature</label>
+                        <img src="../images/ppdc-logo-full.png" class="ui small image" />
+                    </div>
+                    <div class="eight wide field">
+                        <button class="ui positive basic button reqmodal"><i class="check icon"></i>Approve</button>
+                        <button class="ui primary basic button"><i class="paper plane icon"></i>Escalate</button>
+                        <button class="ui negative basic button"><i class="close icon"></i>Cancel </button>
+                    </div>
+                </form>
+            </div>
+            <div class="ui segment">
+                <h2 class="ui header">
+                    <img src="../images/pp.jpg" class="ui circular image">
+                    Patrick
+                </h2>
+                <form class="ui form">
+                    <div class="four wide  field">
+                        <label>Title</label>
+                        <input type="text" readonly name="title" placeholder="Title">
+                    </div>
+                    <div class="four wide field">
+                        <label>Date</label>
+                        <input type="text" readonly name="time" placeholder="Date">
+                    </div>
+                    <div class="four wide field">
+                        <label>Type</label>
+                        <input type="text" readonly name="amountInWords" placeholder="Anount in words">
+                    </div>
+                    <div class="four wide field">
+                        <label>Total Amount</label>
+                        <input type="text" readonly name="total" placeholder="Total">
+                    </div>
+                    <div class="four wide field">
+                        <label>Amount in words</label>
+                        <input type="text" readonly name="amountInWords" placeholder="Anount in words">
+                    </div>
+                    <div class="four wide field">
+                        <label>Beneficiary Account Number</label>
+                        <input type="text" readonly name="accountNumber" placeholder="">
+                    </div>
+                    <div class="four wide field">
+                        <label>Beneficiary Bank Name</label>
+                        <input type="text" readonly name="bankName" placeholder="">
+                    </div>
+                    <div class="four wide field">
+                        <label>Source Account Number</label>
+                        <input type="text" required name="sourceAccountNumber" placeholder="">
+                    </div>
+                    <div class="four wide field">
+                        <label>Source Bank Name</label>
+                        <input type="text" required name="sourceBankName" placeholder="">
+                    </div>
+                    <div class="four wide field">
+                        <label>Project Charged to</label>
+                        <input type="text" required name="projectChargedTo" placeholder="">
+                    </div>
+
+                    <div class="eight wide field">
+                        <div id="item-table">
+                            <table class="ui small celled striped table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">
+                                            Items
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="collapsing">
+                                            <i class="folder icon"></i> node_modules
+                                        </td>
+                                        <td>Initial commit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> test
+                                        </td>
+                                        <td>Initial commit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> build
+                                        </td>
+                                        <td>Initial commit</td>
+
+                                    </tr>
+                                </tbody>
+                                <tfoot class="full-width">
+                                    <tr>
+                                        <th>Total</th>
+                                        <th colspan="4">
+                                            500,000
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="four wide field">
+                        <label>Signature</label>
+                        <img src="../images/ppdc-logo-full.png" class="ui small image" />
+                    </div>
+                    <div class="eight wide field">
+                        <button class="ui positive basic button reqmodal"><i class="check icon"></i>Approve</button>
+                        <button class="ui primary basic button"><i class="paper plane icon"></i>Escalate</button>
+                        <button class="ui negative basic button"><i class="close icon"></i>Cancel </button>
+                    </div>
+                </form>
+            </div> -->
+        </div>
+        <div class="ui tab" data-tab="requisitions">
+            <div class="ui segment">
+                <p></p>
+            </div>
+        </div>
+        <div class="ui tab" data-tab="accounts">
+            <div class="ui segment">
+                <p></p>
+            </div>
+        </div>
+        <div class="ui tab" data-tab="analytics"></div>
+        <div class="ui tab" data-tab="generate"></div>
+
+
+        <div class="ui modal" id="pettyCashModal">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="ui modal" id="fundsModal">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="ui modal" id="sendBackModal">
+            <div class="content">
+                <form class="ui form" id="sendBackForm">
+                    <div class="six wide field">
+                        <label>SentBack message</label>
+                        <textarea rows="2" name="sentBackMessage" placeholder="Enter message"></textarea>
+                    </div>
+                    <button class="ui approve basic button"></button>
+                </form>
+
+            </div>
+        </div>
+        <div class="small ui modal" id="confirmModal">
+            <div class="header">Confirm</div>
+            <div class="content">
+                <p id="confirmMessage">Send Admin A reminder</p>
+            </div>
+            <div class="actions">
+                <div class="ui approve basic green button">Approve</div>
+                <div class="ui cancel basic red button">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+<script>
+    $('.pointing.menu .item').tab();
+</script>
+
+</html>

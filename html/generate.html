@@ -1,0 +1,271 @@
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/semantic.css" />
+        <script src="../js/jquery.js"></script>
+        <script src="../js/semantic.js"></script>
+        <script
+          src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+        <style>
+          .attached.stackable.menu {
+            margin-bottom: 20px;
+          }
+      
+          /**.vertical.pointing.menu{
+                  background-color: #00B5AD !important;
+                  color: white !important
+              }**/
+          .ui.grid .ui.header {
+            color: #00B5AD !important
+          }
+      
+          .vertical.pointing.menu .item.active {
+            background-color: #00B5AD;
+            color: white
+          }
+      
+          .ui.table thead tr {
+            background-color: #00B5AD !important;
+            color: whitesmoke !important
+          }
+      
+          form .field label {
+            color: #00B5AD;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="ui container">
+            <div class="ui attached stackable menu">
+                <div class="ui container">
+                  <div class="center menu">
+                    <a class="item">
+                      <div class="ui large header">
+                        <i class="chart line open teal  icon"></i>
+                        <div class="content">
+                          Gwapp!!
+                          <div class="sub header">for collecting money</div>
+                        </div>
+          
+                      </div>
+                    </a>
+                  </div>
+                  <div class="right menu">
+                    <a class="item" id="logout">
+                      <i class='teal logout icon'></i>Logout
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <div class="ui medium header">Gwapp Generate</div>
+                <div class="sub header">Generate multiple Requisitions by month</div>
+                <form id = "dataForm" class="ui form">
+                  <div class="ui two column fields">
+                    <div class= "ui eight wide field">
+                        <select class="ui dropdown">
+                            <option value="">Select Month</option>
+                            <option value="1">January</option>
+                            <option value="0">February</option>
+                        </select>
+                    </div>
+                    <div class="ui eight wide field">
+                        <select class="ui dropdown">
+                            <option value="">Select Project</option>
+                            <option value="1">DISI</option>
+                            <option value="0">MacAuthur</option>
+                        </select>
+                    </div>
+                    <button class="ui primary button">Submit</button>
+                  </div>
+                </form>
+                <table class="ui celled padded fluid table">
+                    <thead>
+                      <tr>
+                        <th class="">Date</th>
+                        <th>Title</th>
+                        <th>User</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="ui center aligned collapsing">
+                          29 Feb 2019
+                        </td>
+                        <td class="ui center aligned collapsing">
+                          Requisition for two power DC plugs
+                        </td>
+                        <td class="ui center aligned collapsing">
+                          Adekunle Adelowo
+                        </td>
+                        <td class="ui center aliged collapsing">
+                          N100,000.00
+                        </td>
+                        <td class="collapsing">
+                            <div class="ui buttons">
+                                <button class="ui primary basic button reqmodal"><i class="eye icon"></i>View</button>
+                                <button class="ui positive basic button"><i class="print icon"></i>Print</button>
+                                <button class="ui teal basic button"><i class="download icon"></i>Download</button>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h2 class="ui center aligned header">A</h2>
+                        </td>
+                        <td class="single line">
+                          Weight
+                        </td>
+                        <td>
+                          <div class="ui star rating" data-rating="3" data-max-rating="3"></div>
+                        </td>
+                        <td class="right aligned">
+                          100% <br>
+                          <a href="#">65 studies</a>
+                        </td>
+                        <td>Creatine is the reference compound for power improvement, with numbers from one meta-analysis to assess
+                          potency</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th colspan="5">
+                          <div class="ui right floated pagination menu">
+                            <a class="icon item">
+                              <i class="left chevron icon"></i>
+                            </a>
+                            <a class="icon item">
+                              <i class="right chevron icon"></i>
+                            </a>
+                          </div>
+                        </th>
+                      </tr>
+                    </tfoot>
+                </table>
+                <!--Funds Request Modal-->
+            <div class="ui modal" id="funds">
+                    <i class="close icon"></i>
+                    <div class="header">
+                        Funds Requesition
+                    </div>
+                    <div class="scrolling content">
+                        <form class="ui form">
+                            <h2 class="ui dividing header">Funds Requisition Form</h2>
+                            <div class="field">
+                                <label>Name</label>
+                                <input type="text" name="first-name" placeholder="Full Name">
+                            </div>
+                            <div class="field">
+                                <label>Description</label>
+                                <textarea rows="2" placeholder="Expenses Description"></textarea>
+                            </div>
+                            <h4 class="ui dividing header">Online Details</h4>
+                            <div class="field">
+                                <label>Beneficiary Bank Name</label>
+                                <input type="text" name="bank_name" placeholder="Bank Name">
+                            </div>
+                            <div class="field">
+                                <label>Beneficiary Account Number</label>
+                                <input type="text" name="account_number" placeholder="Account Number"></textarea>
+                            </div>
+    
+                            <h4 class="ui dividing header">Items</h4>
+                            <div class="fields">
+                                <div class="field">
+                                    <input type="text" placeholder="Item Description">
+                                </div>
+                                <div class="field">
+                                    <input type="number" placeholder="Amount">
+                                </div>
+                                <div class="field">
+                                    <button class="ui button" type="submit">Add Item</button>
+                                </div>
+                            </div>
+                            <div id="item-table">
+                                <table class="ui celled striped table">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3">
+                                                Items
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="collapsing">
+                                                <i class="folder icon"></i> node_modules
+                                            </td>
+                                            <td>Initial commit</td>
+                                            <td class="right aligned collapsing">
+                                                <div class="ui button icon">
+                                                    <i class="minus circle icon"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="folder icon"></i> test
+                                            </td>
+                                            <td>Initial commit</td>
+                                            <td class="right aligned collapsing">
+                                                <div class="ui button icon">
+                                                    <i class="minus circle icon"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="folder icon"></i> build
+                                            </td>
+                                            <td>Initial commit</td>
+                                            <td class="right aligned collapsing">
+                                                <div class="ui button icon">
+                                                    <i class="minus circle icon"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="full-width">
+                                        <tr>
+                                            <th>Total</th>
+                                            <th colspan="4">
+                                                500,000
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="field">
+                                <label>Total Amount in Words</label>
+                                <input type="text" name="first-name" placeholder="Amount in Words">
+                            </div>
+                            <div class="fields">
+                                <div class="ui calendar six wide field" id="example2">
+                                    <div class="ui input left icon">
+                                        <i class="calendar icon"></i>
+                                        <input type="text" placeholder="Date/Time">
+                                    </div>
+                                </div>
+                                <div class="eight wide field">
+                                    <button class="large ui right floated primary button" type="submit">Submit</button>
+                                </div>
+                            </div>
+    
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    $('.ui.dropdown')
+  .dropdown()
+    </script>
+</html>

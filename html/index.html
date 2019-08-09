@@ -1,0 +1,660 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/semantic.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="../js/semantic.js"></script>
+    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+    <style>
+        .attached.stackable.menu{
+            margin-bottom: 20px;
+        }
+        /**.vertical.pointing.menu{
+            background-color: #00B5AD !important;
+            color: white !important
+        }**/
+        .ui.grid .ui.header{
+            color:#00B5AD !important
+            
+        }
+        .vertical.pointing.menu .item.active{
+            background-color: #00B5AD;
+            color: white
+        }
+        .ui.table thead tr{
+            background-color: #00B5AD !important;
+            color: whitesmoke !important
+        }
+        form .field label{
+            color:#00B5AD;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="ui container">
+        <div class="ui attached stackable menu">
+            <div class="ui container">
+            <div class = "center menu">
+                    <a class="item">
+                            <div class = "ui large header">
+                               <i class="money teal  bill icon"></i>
+                               <div class="content">
+                                       Gwapp !!
+                                       <div class="sub header">for collecting money</div>
+                               </div>
+                               
+                               </div> 
+                       </a>
+            </div>
+                <div class="right menu">
+                    <div class="item">
+                        <i class='teal logout icon'></i>Logout
+                    </div>
+                    <a class="item" id = "viewProfile">
+                        <i class="teal user icon"></i>Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="ui vertical fluid pointing menu">
+                    <a class="active item" data-tab="dashboard">
+                        <i class=" large dashboard icon"></i> Dashboard
+                    </a>
+                    <a class="item" data-tab="requisition">
+                        <i class="large file alternative icon"></i> Requisitions
+                    </a>
+                    <a class="item" data-tab="history">
+                        <i class="large tasks icon"></i> Retirements
+                    </a>
+                </div>
+            </div>
+
+            <div class="stretched twelve wide column">
+                <!--Dash Board Tab-->
+                <div class="ui active tab" data-tab="dashboard">
+                    <div class="ui segment">
+                        <div class="ui two column very relaxed grid">
+                            <div class="column">
+                                <div class="ui big header">Welcome Adekunle!</div> 
+                                <div class="ui center aligned items">
+                                    <div class="item center aligned">
+                                        <i class="big green check icon"></i>
+                                        <div class="content">
+                                            <div class="tiny header">Approved Requistions</div>
+                                            <div class="meta">
+                                                <span class="price">$1200</span>
+                                                <span class="stay">22 in Number</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="big hourglass half orange icon"></i>
+                                        <div class="content">
+                                            <div class="small header">Pending Retirement</div>
+                                            <div class="meta">
+                                                <span class="price">$1200</span>
+                                                <span class="stay">1 Number</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="big money bill teal icon"></i>
+                                        <div class="content">
+                                            <div class="small header">Requested</div>
+                                            <div class="meta">
+                                                <span class="price">$1200</span>
+                                                <span class="stay">1 Number</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="ui medium header">Notifications</div>
+                                <div class="ui teal label">
+                                    <i class="mail icon"></i> 23
+                                </div>
+                                <div class="ui center aligned relaxed divided list">
+                                    <div class="item">
+                                        <i class="large teal envelope middle aligned icon"></i>
+                                        <div class="content">
+                                            <a class="header">Semantic-Org/Semantic-UI</a>
+                                            <div class="description">Updated 10 mins ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="large envelope middle aligned icon"></i>
+                                        <div class="content">
+                                            <a class="header">Semantic-Org/Semantic-UI</a>
+                                            <div class="description">Updated 10 mins ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="large envelope middle aligned icon"></i>
+                                        <div class="content">
+                                            <a class="header">Semantic-Org/Semantic-UI</a>
+                                            <div class="description">Updated 10 mins ago</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <i class="large envelope middle aligned icon"></i>
+                                        <div class="content">
+                                            <a class="header">Semantic-Org/Semantic-UI</a>
+                                            <div class="description">Updated 10 mins ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui vertical divider">
+                        </div>
+
+                    </div>
+
+                    <div class="ui segment">
+                        <div class="ui medium header">Recent Activity</div>
+                        <table class="ui celled striped table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="collapsing">
+                                        Today
+                                    </td>
+                                    <td>Petty Cash</td>
+                                    <td>Request for transportation to Neiti</td>
+                                    <td>Pending</td>
+                                    <td class="right aligned collapsing">
+                                        <div class="ui buttons">
+                                            <button class="ui secondary basic button reqmodal"><i class="pencil icon"></i>Edit</button>
+                                            <button class="ui positive basic button"><i class="bell icon"></i>Remind</button>
+                                            <button class="ui negative basic button"><i class="trash icon"></i>Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <!--Requisition Tab Begins-->
+                <div class="ui tab" data-tab="requisition">
+                    <div class="ui segment">
+                        <div class="ui large teal header">Make a Requisition</div>
+                        <div class="ui grid">
+                            <div class="eight wide column">
+                                <h4 class="ui icon header basic teal button reqmodal">
+                                    <i class="money bill icon"></i>
+                                    <div class="content">
+                                        Petty Cash
+                                        <div class="sub header">Request for cash on or below N10,000.</div>
+                                    </div>
+                                </h4>
+                            </div>
+                            <div class="eight wide column">
+                                <h4 class="ui icon header basic teal button fundsmodal">
+                                    <i class="building icon"></i>
+                                    <div class="content">
+                                        Funds Requisition
+                                        <div class="sub header">Make requistions for organisational expense worth</div>
+                                    </div>
+                                </h4>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--Retirement Tab Begins-->
+                <div class="ui tab" data-tab="history">
+                    <div class="ui segment">
+                        <div class="ui large header">Retirements</div>
+                        <div class="ui small header">Pending Retirements</div>
+                        <table class="ui celled striped table">
+                            <tbody>
+                                <tr>
+                                    <td class="collapsing">
+                                        Today
+                                    </td>
+                                    <td>Request for transportation to Neiti</td>
+                                    <td>Retirement Pending</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="ui small header">Expense Breakdown</div>
+                        <form class="ui form">
+                            <div class="four wide field">
+                                <label>Disbursed Amount</label>
+                                <input type="number" name="advance" placeholder="Disbursed Amount" value="100000">
+                            </div>
+                            <table class="ui celled striped table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Item
+                                        </th>
+                                        <th>Amount</th>
+                                        <th>Amount Spent</th>
+                                        <th>Balance</th>
+                                        <th>Receipt</th>
+                                        <th>Upload</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="collapsing">
+                                            Food for 10 people
+                                        </td>
+                                        <td>N1000000</td>
+                                        <td>
+                                            <div class="field">
+                                                <input type="text" name="first-name" placeholder="First Name">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="field">
+                                                <input type="text" name="first-name" placeholder="First Name">
+                                            </div>
+                                        </td>
+                                        <td>No Receipts</td>
+                                        <td>
+                                            <div class="field">
+                                                <input type="file" name="first-name" placeholder="Upload File">
+                                            </div>
+                                            <button class="ui positive basic button"><i class="upload icon"></i>Upload</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="collapsing">
+                                                Food for 10 people
+                                            </td>
+                                            <td>N1000000</td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="text" name="first-name" placeholder="First Name">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="text" name="first-name" placeholder="First Name">
+                                                </div>
+                                            </td>
+                                            <td>No Receipts</td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="file" name="first-name" placeholder="Upload File">
+                                                </div>
+                                                <button class="ui positive basic button"><i class="upload icon"></i>Upload</button>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                            <td class="collapsing">
+                                                Food for 10 people
+                                            </td>
+                                            <td>N1000000</td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="text" name="first-name" placeholder="First Name">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="text" name="first-name" placeholder="First Name">
+                                                </div>
+                                            </td>
+                                            <td>No Receipts</td>
+                                            <td>
+                                                <div class="field">
+                                                    <input type="file" name="first-name" placeholder="Upload File">
+                                                </div>
+                                                <button class="ui positive basic button"><i class="upload icon"></i>Upload</button>
+                                            </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="fields">
+                            <div class="four wide field">
+                                    <label>Total Balance</label>
+                                    <input type="number" name="advance" placeholder="Total Balance" value="100000">
+                            </div>
+                            <div class="twelve wide field">
+                                <label>Submit</label>
+                            <button class="large ui right floated primary button">Submit</button>
+                            </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-----------------------------------------------------------------------------Modal Sections------------------------------------------------->
+            <!--User Profile Modal --------->
+            <div class="ui modal" id = "profile">
+                <i class="close icon"></i>
+                <div class="header" style="color:#00B5AD">Profile Info</div>
+                <div class="scrolling content">
+                        <div class="ui segment">
+                                <form class="ui form center aligned segment">
+                                        <div class="ui center aligned header">Adekunle Adelowo</div>
+                                        <img class="ui centered small circular image" src="../images/pp.jpg">
+                                            <div class="tiny header divider">Upload Profile Pic</div>
+                                            <div class="ui buttons">
+                                                    <button class="ui teal basic button"><input type="file" class = "" name="first-name" placeholder="Upload File"></button>
+                                                    <button class="ui teal basic button"><i class="upload icon"></i>Upload</button>
+                                            </div>
+                                </form>
+                                <form class="ui form center aligned segment">
+                                    <div class="ui tiny header">Signature</div>
+                                    <div class="ui buttons">
+                                            <button class="ui teal basic button"><input type="file" class = "" name="first-name" placeholder="Upload File"></button>
+                                            <button class="ui teal basic button"><i class="upload icon"></i>Upload</button>
+                                    </div>
+                                </form>
+                                <form class = "ui form center aligned segment">
+                                    <div class = "ui tiny header">Change Password</div>
+                                    <div class="field">
+                                            <label>New Paswword</label>
+                                            <div class="ui left icon input">
+                                                <input type="text" placeholder="Email">
+                                                <i class="teal mail icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label>Confirm New Password</label>
+                                            <div class="ui left icon input">
+                                                <input type="password">
+                                                <i class="teal lock icon"></i>
+                                            </div>
+                                        </div>
+                                        <div class="ui teal submit button">Change</div>
+                                </form>
+                            </div>
+                </div>
+            </div>
+            <!--Petty cash Modal-->
+            <div class="ui modal" id="pettyCash">
+                <i class="close icon"></i>
+                <div class="header" style = "color:#00B5AD">
+                    Petty Cash Requesition
+                </div>
+                <div class="scrolling content">
+                    <form class="ui form">
+
+                        <div class="field">
+                            <label>Name</label>
+                            <input type="text" name="first-name" placeholder="Full Name">
+                        </div>
+                        <div class="field">
+                            <label>Description</label>
+                            <textarea rows="2" placeholder="Expenses Description"></textarea>
+                        </div>
+                        <h4 class="ui dividing header" style = "color:#00B5AD">Items</h4>
+                        <div class="fields">
+                            <div class="field">
+                                <input type="text" placeholder="Item Description">
+                            </div>
+                            <div class="field">
+                                <input type="number" placeholder="Amount">
+                            </div>
+                            <div class="field">
+                                <button class="ui teal button" type="submit">Add Item</button>
+                            </div>
+                        </div>
+                        <div id="item-table">
+                            <table class="ui celled striped table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3" style = "color:#00B5AD">
+                                            Items
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="collapsing">
+                                            <i class="folder icon"></i> node_modules
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui teal button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> test
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui teal button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> build
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui teal button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="full-width">
+                                    <tr>
+                                        <th>Total</th>
+                                        <th colspan="4">
+                                            500,000
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="field">
+                            <label>Total Amount in Words</label>
+                            <input type="text" name="amountInWords" placeholder="Amount in Words">
+                        </div>
+                        <div class="fields">
+                            <div class="ui calendar six wide field" id="example1">
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Date/Time">
+                                </div>
+                            </div>
+                            <div class="eight wide field">
+                                <button class="large ui right floated teal button" type="submit">Submit</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <!--Funds Request Modal-->
+            <div class="ui modal" id="funds">
+                <i class="close icon"></i>
+                <div class="header">
+                    Funds Requesition
+                </div>
+                <div class="scrolling content">
+                    <form class="ui form">
+                        <h2 class="ui dividing header">Funds Requisition Form</h2>
+                        <div class="field">
+                            <label>Name</label>
+                            <input type="text" name="first-name" placeholder="Full Name">
+                        </div>
+                        <div class="field">
+                            <label>Description</label>
+                            <textarea rows="2" placeholder="Expenses Description"></textarea>
+                        </div>
+                        <h4 class="ui dividing header">Online Details</h4>
+                        <div class="field">
+                            <label>Beneficiary Bank Name</label>
+                            <input type="text" name="bank_name" placeholder="Bank Name">
+                        </div>
+                        <div class="field">
+                            <label>Beneficiary Account Number</label>
+                            <input type="text" name="account_number" placeholder="Account Number"></textarea>
+                        </div>
+
+                        <h4 class="ui dividing header">Items</h4>
+                        <div class="fields">
+                            <div class="field">
+                                <input type="text" placeholder="Item Description">
+                            </div>
+                            <div class="field">
+                                <input type="number" placeholder="Amount">
+                            </div>
+                            <div class="field">
+                                <button class="ui button" type="submit">Add Item</button>
+                            </div>
+                        </div>
+                        <div id="item-table">
+                            <table class="ui celled striped table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">
+                                            Items
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="collapsing">
+                                            <i class="folder icon"></i> node_modules
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> test
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="folder icon"></i> build
+                                        </td>
+                                        <td>Initial commit</td>
+                                        <td class="right aligned collapsing">
+                                            <div class="ui button icon">
+                                                <i class="minus circle icon"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="full-width">
+                                    <tr>
+                                        <th>Total</th>
+                                        <th colspan="4">
+                                            500,000
+                                        </th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="field">
+                            <label>Total Amount in Words</label>
+                            <input type="text" name="first-name" placeholder="Amount in Words">
+                        </div>
+                        <div class="fields">
+                            <div class="ui calendar six wide field" id="example2">
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input type="text" placeholder="Date/Time">
+                                </div>
+                            </div>
+                            <div class="eight wide field">
+                                <button class="large ui right floated primary button" type="submit">Submit</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <!--Confirm Modal-->
+            <div class="small ui modal" id="confirmModal">
+                <div class="header">Confirm</div>
+                <div class="content">
+                    <p id="confirmMessage">Send Admin A reminder</p>
+                </div>
+                <div class="actions">
+                    <div class="ui approve basic green button">Approve</div>
+                    <div class="ui cancel basic red button">Cancel</div>
+                </div>
+            </div>
+            <!--Message Notificaion Modal-->
+            <div class="mini ui modal" id="messageModal">
+                <div class="header">Notifications</div>
+                <div class="content">
+                    <p>Very long content goes here</p>
+                </div>
+                <div class="actions">
+                    <span class="ui left floated button">18 Nov 2018</span>
+                    <div class="ui approve primary button">Ok</div>
+
+                </div>
+            </div>
+
+        </div>
+
+</body>
+<script type="text/javascript">
+    $('.ui.modal')
+        .modal()
+    const today = new Date();
+    $('#example1').calendar({ type: 'date' }).calendar('set date', today);
+    $('#example2').calendar({ type: 'date' }).calendar('set date', today);
+
+    $('#pettyCash')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '.reqmodal', 'show')
+    $('#funds')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '.fundsmodal', 'show')
+    $('#profile')
+        .modal('setting', 'transition', "Horizontal Flip").modal('setting', 'closable', false)
+        .modal('attach events', '#viewProfile', 'show')
+
+    $('.vertical.menu .item').tab();
+</script>
+
+</html>
