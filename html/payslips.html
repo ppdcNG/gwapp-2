@@ -33,7 +33,25 @@
         form .field label{
             color:#00B5AD;
         }
-
+        /* *** */
+        @media only screen and (max-width: 767px) {
+            .ui.grid {
+                display: block;
+            }
+            div.four.wide.column a.item {
+                width: 80vw !important;
+            }
+            div.stretched.twelve.wide.column {
+                width: 100% !important;
+            }
+            div.ui.vertical.fluid.pointing.menu {
+                border: none;
+                box-shadow: none;
+            }
+            a.active.item::after {
+                background: #00B5AD !important;
+            }
+        }
         
     </style>
 </head>
